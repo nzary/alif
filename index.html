@@ -553,6 +553,11 @@ body {
 .status-banner { margin: 0 0 18px; padding: 14px 18px; border: 1px solid #e0d4b8; border-left: 4px solid var(--gold); background: #fdf9f0; color: #5a4712; border-radius: 8px; font-size: 14px; line-height: 1.55; }
 [data-theme="dark"] .status-banner { background: #2a2010; border-color: #3a3020; border-left-color: var(--gold); color: #f1dca8; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status-banner { background: #2a2010; border-color: #3a3020; border-left-color: var(--gold); color: #f1dca8; } }
+
+.item-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.item-link:hover, .item-link:focus-visible { text-decoration-style: solid; }
+.item-link::after { content: " \2197"; font-size: 0.8em; opacity: 0.6; }
+.banner-link { color: inherit; font-weight: 600; }
 .new-tag {
   font-size: 9px;
   font-weight: 700;
@@ -1318,7 +1323,7 @@ button:focus-visible, a:focus-visible {
 
   <!-- ALIF 2.0 STATUS BANNER -->
   <div class="status-banner reveal" role="note" aria-label="ALiF 2.0 status">
-    <strong>ALiF 2.0 is in development.</strong> The current published Standard is v1.0r1. The proposed ALiF 2.0 keeps the five components, sixteen sub-competencies and three levels, and adds new conformance requirements, including data literacy first and a Learning Conditions Statement for organizations. <strong>Public consultation opens on 2 November 2026 and closes on 1 January 2027.</strong> Release is planned for the second quarter of 2027.
+    <strong>ALiF 2.0 is in development.</strong> The current published Standard is v1.0r1. The proposed ALiF 2.0 keeps the five components, sixteen sub-competencies and three levels, and adds new conformance requirements, including data literacy first and a Learning Conditions Statement for organizations. <strong>Public consultation opens on 2 November 2026 and closes on 1 January 2027.</strong> Release is planned for the second quarter of 2027. <a class="banner-link" href="/consultation/">About the consultation</a> · <a class="banner-link" href="/standard/v2/">What ALiF 2.0 changes</a>
   </div>
 
   <!-- FILTER BAR -->
@@ -1353,18 +1358,18 @@ button:focus-visible, a:focus-visible {
       <div class="layer-content" id="layer-1-content">
         <div class="items">
           <div class="item-group">Core Artifacts</div>
-          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> ALiF Standard v1.0r1 <span class="class-tag">CURRENT</span></div>
-          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> 5 Components <span class="class-tag" data-tip="Technical Understanding · Evaluation & Critical Appraisal · Practical Application · Ethics & Responsibility · Data Literacy">TEC · EVA · PRA · ETH · DAT</span></div>
-          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> 3 Levels <span class="class-tag">L1 · L2 · L3</span></div>
-          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> 16 Sub-Competencies</div>
-          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> Conformance Requirements <span class="class-tag">NORMATIVE</span></div>
-          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> ALiF Standard v2.0 <span class="class-tag">IN DEVELOPMENT · CONSULTATION 2 NOV 2026 – 1 JAN 2027</span> <span class="new-tag">NEW</span></div>
-          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> <span data-tip="Proposed for ALiF 2.0: programs teach DAT.1 and DAT.2, at least at Foundation level, before or alongside the first EVA or ETH module">Data Literacy First (DAT co-requisite)</span> <span class="class-tag">PROPOSED FOR v2.0</span> <span class="new-tag">NEW</span></div>
-          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> <span data-tip="Proposed for ALiF 2.0: organizations that implement ALiF for their own staff, trainees or students and claim conformance document practice, supervision, learning time and voice, and report what they delivered">Learning Conditions Statement</span> <span class="class-tag">PROPOSED FOR v2.0</span> <span class="new-tag">NEW</span></div>
+          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> <a class="item-link" href="/standard/">ALiF Standard v1.0r1</a> <span class="class-tag">CURRENT</span></div>
+          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> <a class="item-link" href="/standard/components/">5 Components</a> <span class="class-tag" data-tip="Technical Understanding · Critical Evaluation · Practical Application · Ethical Considerations · Data Literacy">TEC · EVA · PRA · ETH · DAT</span></div>
+          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> <a class="item-link" href="/standard/levels/">3 Levels</a> <span class="class-tag">L1 · L2 · L3</span></div>
+          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> <a class="item-link" href="/standard/components/">16 Sub-Competencies</a></div>
+          <div class="item item-core"><span class="dot"></span><span class="status-icon" aria-label="Core">◆</span> <a class="item-link" href="/standard/conformance/">Conformance Requirements</a> <span class="class-tag">NORMATIVE</span></div>
+          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> <a class="item-link" href="/standard/v2/">ALiF Standard v2.0</a> <span class="class-tag">IN DEVELOPMENT · CONSULTATION 2 NOV 2026 – 1 JAN 2027</span> <span class="new-tag">NEW</span></div>
+          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> <a class="item-link" href="/standard/data-literacy-first/"><span data-tip="Proposed for ALiF 2.0: programs teach DAT.1 and DAT.2, at least at Foundation level, before or alongside the first EVA or ETH module">Data Literacy First (DAT co-requisite)</span></a> <span class="class-tag">PROPOSED FOR v2.0</span> <span class="new-tag">NEW</span></div>
+          <div class="item item-planned"><span class="dot"></span><span class="status-icon" aria-label="Planned">◇</span> <a class="item-link" href="/standard/learning-conditions-statement/"><span data-tip="Proposed for ALiF 2.0: organizations that implement ALiF for their own staff, trainees or students and claim conformance document practice, supervision, learning time and voice, and report what they delivered">Learning Conditions Statement</span></a> <span class="class-tag">PROPOSED FOR v2.0</span> <span class="new-tag">NEW</span></div>
 
           <div class="item-group">Companion Documents</div>
-          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> Implementation Pathway Model v1.0</div>
-          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> Institutional Adoption Guide v1.0</div>
+          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> <a class="item-link" href="/companions/implementation-pathway-model/">Implementation Pathway Model v1.0</a></div>
+          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> <a class="item-link" href="/companions/institutional-adoption-guide/">Institutional Adoption Guide v1.0</a></div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> Competency Framework v2</div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> Concept Paper v2</div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> Development Protocol v1</div>
@@ -1405,7 +1410,7 @@ button:focus-visible, a:focus-visible {
       <div class="layer-content" id="layer-2-content">
         <div class="items">
           <div class="item-group">Direct — Individual</div>
-          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> <span data-tip="ALiF Self-Assessment Questionnaire v2 — currently undergoing Phase 1 validation">ALiF SAQ v2</span> <span class="class-tag">DIRECT · SELF-REPORT · INDIVIDUAL · PHASE 1 VALIDATION</span></div>
+          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> <a class="item-link" href="/instruments/alif-saq/"><span data-tip="ALiF Self-Assessment Questionnaire v2 — currently undergoing Phase 1 validation">ALiF SAQ v2</span></a> <span class="class-tag">DIRECT · SELF-REPORT · INDIVIDUAL · PHASE 1 VALIDATION</span></div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> SAQ Administrator Guide v2</div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> SAQ Respondent Form v2</div>
 
@@ -1490,8 +1495,6 @@ button:focus-visible, a:focus-visible {
       </div>
       <div class="layer-content" id="layer-4-content">
         <div class="items">
-          <div class="item-group">Active Adoptions</div>
-          <div class="item item-active"><span class="dot"></span><span class="status-icon" aria-label="Active">●</span> Dubai Health AI Literacy Policy <span class="class-tag">ANNOUNCED APR 2025</span></div>
 
           <div class="item-group">Adoption Governance</div>
           <div class="item item-companion"><span class="dot"></span><span class="status-icon" aria-label="Companion">○</span> Adoption Charter Template</div>
@@ -1518,7 +1521,7 @@ button:focus-visible, a:focus-visible {
       </div>
       <div class="gov-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        Versioning &amp; Review Policy v2.0 (early review 1 Oct 2026) <span class="new-tag">NEW</span>
+        <a class="item-link" href="/governance/versioning-policy/">Versioning &amp; Review Policy v2.0</a> (early review 1 Oct 2026) <span class="new-tag">NEW</span>
       </div>
       <div class="gov-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
@@ -1697,11 +1700,12 @@ button:focus-visible, a:focus-visible {
       </div>
     </div>
     <div class="changelog-body" id="changelog-body">
+      <div class="changelog-entry">Detail pages added for the Standard, its components, progression levels, conformance requirements, the proposed ALiF 2.0 requirements, the Implementation Pathway Model, the Institutional Adoption Guide, the self-assessment questionnaire, the Versioning and Review Policy and the consultation. Linked items are underlined on the map</div>
       <div class="changelog-entry">Map retitled "ALiF 2.0 Ecosystem Map" to align with the ALiF 2.0 release; the separate map version number is retired</div>
       <div class="changelog-entry">Status banner added: ALiF 2.0 in development; public consultation from 2 November 2026 to 1 January 2027; release planned for the second quarter of 2027</div>
       <div class="changelog-entry">Layer 1: ALiF Standard v2.0 added as in development; Data Literacy First and the Learning Conditions Statement shown as proposed for v2.0. The DAT Minimum Threshold was previously shown as normative in v1.0r1; it is not part of v1.0r1</div>
       <div class="changelog-entry">Layer 3: FAIM Foundation Course and pathways corrected to in development, designed against ALiF 2.0; the lesson plan entry is removed</div>
-      <div class="changelog-entry">Layer 4: an institution-specific conformance entry is removed; no conformance claims are listed until ALiF 2.0 is released</div>
+      <div class="changelog-entry">Layer 4: institution-specific entries are removed; no adoptions or conformance claims are listed until ALiF 2.0 is released</div>
       <div class="changelog-entry">Governance strip: Versioning and Review Policy v2.0, adopted at an early review on 1 October 2026</div>
       <div class="changelog-entry">Past target dates removed from planned items</div>
     </div>
